@@ -3,6 +3,7 @@
 @import url('./components/Hero.css');
 @import url('./components/ProductCard.css');
 @import url('./components/ProductSection.css');
+@import url('./App.css');
 
 @tailwind base;
 @tailwind components;
@@ -15,11 +16,12 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #FFFFFF;
+  background-color: #141414; /* Netflix dark background */
+  color: #e5e5e5; /* Light text for contrast */
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl transition-all duration-300;
+    @apply bg-black/30 backdrop-blur-md border border-gray-800 shadow-lg transition-all duration-300;
   }
 }
