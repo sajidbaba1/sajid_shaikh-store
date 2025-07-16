@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 400px;
+  height: 500px; /* Increased height */
   width: 100%;
   overflow: hidden;
 }
@@ -23,16 +23,17 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
+  padding: 2rem;
 }
 
 .hero-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 3rem; /* Increased from 2rem */
+  font-weight: 800;
+  margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.75rem; /* Increased from 1.25rem */
+  font-weight: 600;
 }
