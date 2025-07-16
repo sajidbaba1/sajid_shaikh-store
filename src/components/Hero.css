@@ -1,8 +1,9 @@
 .hero {
   position: relative;
-  height: 300px; /* Reduced from 500px for mobile */
+  height: 300px;
   width: 100%;
   overflow: hidden;
+  margin-top: 3rem; /* Offset for navbar height */
 }
 
 .hero-image {
@@ -24,17 +25,17 @@
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  padding: 1rem; /* Reduced from 2rem */
+  padding: 1rem;
 }
 
 .hero-title {
-  font-size: 2rem; /* Reduced from 3rem */
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem; /* Reduced from 1.75rem */
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -42,6 +43,7 @@
 @media (max-width: 640px) {
   .hero {
     height: 200px;
+    margin-top: 2.5rem; /* Adjusted for mobile navbar height */
   }
   .hero-overlay {
     padding: 0.5rem;
