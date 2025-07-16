@@ -1,0 +1,15 @@
+.navbar {
+  @apply fixed top-0 left-0 w-full py-5 z-50;
+}
+
+.navbar-logo {
+  @apply text-3xl font-extrabold text-primary tracking-tight;
+}
+
+.navbar-links {
+  @apply flex space-x-10;
+}
+
+.navbar-link a {
+  @apply text-lg font-semibold text-primary hover:text-accent transition-colors duration-200;
+}
