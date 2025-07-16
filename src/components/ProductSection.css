@@ -14,6 +14,7 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 @media (width >= 640px) {
@@ -32,8 +33,4 @@
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}
-
-.product-grid {
-  gap: 1.5rem;
 }
