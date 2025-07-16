@@ -1,18 +1,27 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const navItems = ['Hair', 'Skin', 'Body'];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="navbar"
+      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <motion.h1
@@ -38,7 +47,7 @@ const Navbar = () => {
           </ul>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white md:hidden focus:outline-none"
+            className="text-white md:hidden focus:outline-none z-50"
           >
             <svg
               className="w-6 h-6"
