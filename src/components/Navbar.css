@@ -55,9 +55,9 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 100%; /* Ensure full width */
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem 1rem; /* Increased padding for full-width balance */
     gap: 0.75rem;
     z-index: 50;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -72,11 +72,11 @@
     top: calc(100% - 0.25rem);
   }
   .navbar-links.active li {
-    text-align: right; /* Shift items to the right in dropdown */
-    padding-right: 1rem; /* Add right padding for alignment */
+    text-align: left; /* Reverted to left alignment */
+    padding-left: 0.5rem; /* Slight right shift with padding */
   }
   .navbar .flex.items-center {
-    margin-left: 0; /* Reverted to remove excessive left shift */
+    margin-left: -1rem; /* Reduced from -1.5rem to shift button left */
   }
   .navbar button {
     background-color: #ffffff;
@@ -113,16 +113,15 @@
   .navbar-link a {
     font-size: 1.5rem;
   }
-  /* Move title to right side */
   .navbar .flex {
-    justify-content: flex-end; /* Right-align the title and button */
+    justify-content: flex-end;
     width: 100%;
   }
   .navbar .flex h1 {
-    order: 2; /* Move title to the right */
-    margin-left: 1rem; /* Space between title and button */
+    order: 2;
+    margin-left: 1rem;
   }
   .navbar .flex div:last-child {
-    order: 1; /* Keep button on the left */
+    order: 1;
   }
 }
