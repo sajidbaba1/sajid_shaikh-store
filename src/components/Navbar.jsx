@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import './Navbar.css';
 
 const navItems = ['Hair', 'Skin', 'Body'];
 
@@ -8,23 +9,19 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full bg-white/20 backdrop-blur-lg shadow-lg z-50 py-4"
+      className="navbar"
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <h1 className="text-3xl font-extrabold text-primary tracking-tight">
-          Sajid Shaikh Store
-        </h1>
-        <ul className="flex space-x-8">
+        <h1 className="navbar-logo">Sajid Shaikh Store</h1>
+        <ul className="navbar-links">
           {navItems.map((item) => (
             <motion.li
               key={item}
-              whileHover={{ scale: 1.1, color: '#FBBF24' }}
+              whileHover={{ scale: 1.1, color: '#FF0000' }} // Netflix red hover
               transition={{ type: 'spring', stiffness: 300 }}
-              className="text-lg font-medium text-primary hover:text-accent"
+              className="navbar-link"
             >
-              <a href={`#${item.toLowerCase()}`} className="transition-colors duration-200">
-                {item}
-              </a>
+              <a href={`#${item.toLowerCase()}`}>{item}</a>
             </motion.li>
           ))}
         </ul>
