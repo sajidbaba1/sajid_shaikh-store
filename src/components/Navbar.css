@@ -4,34 +4,33 @@
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 15;
-  padding-top: 2rem;
-  padding-bottom: 0rem;
-  
-  padding-right: 6rem; /* Increased from 2rem to shift left further */
+  z-index: 100; /* Ensure it stays above other content */
+  padding: 0.75rem 1rem; /* Reduced padding for mobile */
   border-bottom: 2px solid #2d2d2d;
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 1rem; /* Smaller padding when scrolled */
+  background-color: rgba(0, 0, 0, 0.95); /* Slightly darker on scroll */
 }
 
 .navbar-logo {
-  font-size: 2.1rem;
-  font-weight: 1000;
+  font-size: 1.5rem; /* Reduced from 2rem for mobile base */
+  font-weight: 900;
   color: #ffffff;
-  font-family: 'Courier New', Courier, monospace;
-    
-  padding-left: 5rem; 
   letter-spacing: -0.05em;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ff0000, 0 0 30px #000000;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ff0000, 0 0 30px #ff4500;
 }
 
 .navbar-links {
   display: flex;
-  gap: 3rem;
-  margin-right: 2rem;
-  margin-left: -1rem; /* Shift items left relative to container */
+  gap: 1.5rem;
+  margin-left: -0.5rem;
 }
 
 .navbar-link a {
-  font-size: 2rem;
+  font-size: 1.2rem; /* Reduced from 1.5rem for mobile base */
   font-weight: 700;
   color: #a0a0a0;
   transition: color 0.2s ease;
@@ -41,8 +40,46 @@
   color: #ff0000;
 }
 
-@media (min-width: 640px) {
+/* Mobile menu */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+  .navbar-logo {
+    font-size: 1.25rem;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+    z-index: 50;
+  }
+  .navbar.scrolled .navbar-links.active {
+    top: calc(100% - 0.5rem); /* Adjust for scrolled padding */
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 641px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+  .navbar-logo {
+    font-size: 3rem;
+  }
   .navbar-links {
     gap: 4rem;
+  }
+  .navbar-link a {
+    font-size: 2rem;
   }
 }
