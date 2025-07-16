@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -29,28 +30,32 @@ const ProductCard = ({ product }) => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white/30 backdrop-blur-lg rounded-xl shadow-lg p-4 w-60 text-center flex-shrink-0"
+      className="product-card"
     >
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-40 object-cover rounded-md mb-3"
+        className="product-image"
       />
-      <h3 className="text-lg font-semibold text-primary">{product.name}</h3>
-      <p className="text-sm text-gray-600 line-through">₹{product.originalPrice}</p>
-      <p className="text-xl font-bold text-primary">₹{product.discountedPrice}</p>
-      <p className="text-sm text-red-600 font-medium">Only {product.stock} left!</p>
-      <p className="text-sm text-red-600 font-medium">
-        Sale ends: {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-      </p>
-      <motion.a
-        href={product.affiliateLink}
-        whileHover={{ scale: 1.05, backgroundColor: '#F59E0B' }}
-        whileTap={{ scale: 0.95 }}
-        className="mt-4 block bg-accent text-white py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-200"
-      >
-        Buy Now
-      </motion.a>
+      <div className="product-info">
+        <h3 className="product-name">{product.name}</h3>
+        <p className="product-prices">
+          <span className="product-original-price">₹{product.originalPrice}</span>
+          <span className="product-discounted-price">₹{product.discountedPrice}</span>
+        </p>
+        <p className="product-stock">Only {product.stock} left!</p>
+        <p className="product-timer">
+          Sale ends: {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+        </p>
+        <motion.a
+          href={product.affiliateLink}
+          whileHover={{ scale: 1.05, backgroundColor: '#FF0000' }} // Netflix red
+          whileTap={{ scale: 0.95 }}
+          className="product-button"
+        >
+          Buy Now
+        </motion.a>
+      </div>
     </motion.div>
   );
 };

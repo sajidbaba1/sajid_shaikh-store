@@ -1,31 +1,39 @@
 .product-card {
-  @apply w-64 flex-shrink-0 rounded-xl p-5 text-center;
+  @apply w-48 h-72 bg-black bg-opacity-80 rounded-lg overflow-hidden cursor-pointer;
 }
 
 .product-image {
-  @apply w-full h-44 object-cover rounded-lg mb-4;
+  @apply w-full h-48 object-cover;
+}
+
+.product-info {
+  @apply p-2 text-center;
 }
 
 .product-name {
-  @apply text-xl font-semibold text-primary mb-2;
+  @apply text-sm font-medium text-white truncate;
+}
+
+.product-prices {
+  @apply text-xs text-gray-400 mb-1;
 }
 
 .product-original-price {
-  @apply text-sm text-gray-600 line-through mb-1;
+  @apply line-through mr-2;
 }
 
 .product-discounted-price {
-  @apply text-2xl font-bold text-primary mb-2;
+  @apply text-white font-semibold;
 }
 
 .product-stock {
-  @apply text-sm text-red-600 font-medium mb-1;
+  @apply text-xs text-red-500 mb-1;
 }
 
 .product-timer {
-  @apply text-sm text-red-600 font-medium mb-3;
+  @apply text-xs text-red-500 mb-2;
 }
 
 .product-button {
-  @apply block bg-accent text-white py-3 px-8 rounded-lg text-lg font-semibold transition-colors duration-200;
+  @apply w-full bg-red-600 text-white py-1.5 text-sm rounded font-medium transition-colors duration-200;
 }
