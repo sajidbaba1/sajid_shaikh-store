@@ -113,23 +113,21 @@
   .navbar-link a {
     font-size: 1.5rem;
   }
-  /* Revert title to left side */
   .navbar .flex {
-    justify-content: flex-start; /* Back to left alignment */
+    justify-content: flex-start;
     width: auto;
   }
   .navbar .flex h1 {
-    order: 1; /* Title on the left */
-    margin-right: 1rem; /* Space between title and button */
+    order: 1;
+    margin-right: 2rem; /* Increased to shift title slightly right */
   }
   .navbar .flex div:last-child {
-    order: 2; /* Button on the right */
+    order: 2;
   }
-  /* Adjust navbar to avoid hero overlap */
   .navbar {
-    background-color: transparent; /* Transparent when not scrolled */
+    background-color: transparent;
   }
   .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.95); /* Solid background on scroll */
+    background-color: rgba(0, 0, 0, 0.95);
   }
 }
