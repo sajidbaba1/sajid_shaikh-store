@@ -26,6 +26,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -44,7 +48,7 @@ const Navbar = () => {
           Sajid Shaikh Store
         </motion.h1>
         <div className="flex items-center">
-          <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+          <ul className={`navbar-links ${isMenuOpen ? 'active expanded' : ''}`}>
             {navItems.map((item) => (
               <motion.li
                 key={item}
@@ -57,12 +61,12 @@ const Navbar = () => {
             ))}
           </ul>
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={handleMenuToggle}
             className="text-white md:hidden focus:outline-none z-50"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg
-              className="w-6 h-6"
+              className="w-1.5rem h-1.5rem" /* Adjusted class for consistency */
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
