@@ -66,9 +66,24 @@
   .navbar.scrolled .navbar-links.active {
     top: calc(100% - 0.25rem);
   }
-  /* Shift button left */
+  /* Stylish hamburger button and left shift */
   .navbar .flex.items-center {
-    margin-left: -0.5rem; /* Shift the button and links container left */
+    margin-left: -1rem; /* Increased from -0.5rem for more left shift */
+  }
+  .navbar button {
+    background-color: #ffffff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  .navbar button:hover {
+    background-color: #ff0000;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  .navbar button svg {
+    stroke-width: 2.5;
   }
 }
 
