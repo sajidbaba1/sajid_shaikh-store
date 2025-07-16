@@ -1,19 +1,38 @@
 .hero {
-  @apply relative h-[400px] w-full overflow-hidden;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-image {
-  @apply w-full h-full object-cover brightness-75;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
 }
 
 .hero-overlay {
-  @apply absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center text-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
 .hero-title {
-  @apply text-4xl font-bold mb-4;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  @apply text-xl font-medium;
+  font-size: 1.25rem;
+  font-weight: 500;
 }

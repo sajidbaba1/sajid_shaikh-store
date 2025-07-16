@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #000000;
+  background-color: #000;
   background-opacity: 0.9;
   z-index: 50;
   padding-top: 1rem;
@@ -14,7 +14,7 @@
 .navbar-logo {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: -0.025em;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .navbar-link a:hover {
-  color: #ff0000;
+  color: #f00;
 }
 
 /* Removed invalid media query with context */
-@media (min-width: 640px) {
+@media (width >= 640px) {
   .navbar-links {
     gap: 2.5rem;
   }

@@ -1,39 +1,68 @@
 .product-card {
-  @apply w-48 h-72 bg-black bg-opacity-80 rounded-lg overflow-hidden cursor-pointer;
+  width: 12rem;
+  height: 18rem;
+  background-color: rgb(0 0 0 / 80%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .product-image {
-  @apply w-full h-48 object-cover;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
 }
 
 .product-info {
-  @apply p-2 text-center;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .product-name {
-  @apply text-sm font-medium text-white truncate;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product-prices {
-  @apply text-xs text-gray-400 mb-1;
+  font-size: 0.75rem;
+  color: #a0a0a0;
+  margin-bottom: 0.25rem;
 }
 
 .product-original-price {
-  @apply line-through mr-2;
+  text-decoration: line-through;
+  margin-right: 0.5rem;
 }
 
 .product-discounted-price {
-  @apply text-white font-semibold;
+  color: #fff;
+  font-weight: 600;
 }
 
 .product-stock {
-  @apply text-xs text-red-500 mb-1;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-bottom: 0.25rem;
 }
 
 .product-timer {
-  @apply text-xs text-red-500 mb-2;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-bottom: 0.5rem;
 }
 
 .product-button {
-  @apply w-full bg-red-600 text-white py-1.5 text-sm rounded font-medium transition-colors duration-200;
+  width: 100%;
+  background-color: #f00;
+  color: #fff;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }

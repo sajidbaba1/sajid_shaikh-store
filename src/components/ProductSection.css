@@ -1,13 +1,13 @@
 .product-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #000000;
+  background-color: #000;
 }
 
 .section-title {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 
@@ -16,19 +16,19 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
