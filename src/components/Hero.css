@@ -1,7 +1,19 @@
 .hero {
-  @apply relative h-[500px] flex items-center justify-center bg-primary overflow-hidden;
+  @apply relative h-[400px] w-full overflow-hidden;
 }
 
 .hero-image {
-  @apply w-full max-w-5xl h-auto object-contain rounded-2xl shadow-2xl;
+  @apply w-full h-full object-cover brightness-75;
+}
+
+.hero-overlay {
+  @apply absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center text-white;
+}
+
+.hero-title {
+  @apply text-4xl font-bold mb-4;
+}
+
+.hero-subtitle {
+  @apply text-xl font-medium;
 }
