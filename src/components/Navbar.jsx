@@ -13,9 +13,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8, filter: 'brightness(0.5)' }}
+          animate={{ opacity: 1, scale: 1, filter: 'brightness(1.5)' }}
+          transition={{ duration: 1, delay: 0.2, repeat: Infinity, repeatType: 'reverse' }}
           className="navbar-logo"
         >
           Sajid Shaikh Store
