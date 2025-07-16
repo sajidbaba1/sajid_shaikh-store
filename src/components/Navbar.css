@@ -1,31 +1,42 @@
 .navbar {
-  @apply fixed top-0 left-0 w-full bg-gradient-to-r from-black to-gray-900 bg-opacity-95 z-50 py-4 border-b border-gray-800 shadow-lg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  background-opacity: 0.9;
+  z-index: 50;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2d2d2d;
 }
 
 .navbar-logo {
-  @apply text-3xl font-bold text-white tracking-tight bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.025em;
 }
 
 .navbar-links {
-  @apply flex space-x-8 items-center;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar-link a {
-  @apply text-lg font-medium text-gray-300 hover:text-red-500 transition-colors duration-200;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #a0a0a0;
+  transition: color 0.2s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+.navbar-link a:hover {
+  color: #ff0000;
+}
+
+/* Removed invalid media query with context */
+@media (min-width: 640px) {
   .navbar-links {
-    @apply flex-col space-x-0 space-y-4 mt-4;
-  }
-  .navbar {
-    @apply py-2;
-  }
-  .navbar-logo {
-    @apply text-2xl;
-  }
-  .navbar-link a {
-    @apply text-base;
+    gap: 2.5rem;
   }
 }
