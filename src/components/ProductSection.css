@@ -1,14 +1,14 @@
 .product-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem; /* Reduced from 4rem */
+  padding-bottom: 2rem; /* Reduced from 4rem */
   background-color: #000000;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduced from 2.5rem */
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
   text-align: center;
   position: relative;
 }
@@ -19,7 +19,7 @@
   bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%; /* Adjustable width of the line */
+  width: 30%; /* Reduced from 50% for mobile */
   height: 2px;
   background-color: #ffffff;
   opacity: 0.5;
@@ -28,7 +28,7 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.5rem; /* Reduced from 2rem */
 }
 
 @media (min-width: 640px) {
@@ -46,5 +46,22 @@
 @media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .product-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-title::after {
+    width: 20%;
+  }
+  .product-grid {
+    gap: 1rem;
   }
 }
