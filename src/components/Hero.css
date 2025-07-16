@@ -3,14 +3,14 @@
   height: 300px;
   width: 100%;
   overflow: hidden;
-  margin-top: 2.5rem; /* Reduced from 3rem to match new navbar height */
+  margin-top: 2.5rem;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.75);
+  filter: brightness(0.6); /* Darkened background for contrast */
 }
 
 .hero-overlay {
@@ -26,24 +26,37 @@
   text-align: center;
   color: #ffffff;
   padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3); /* Added overlay for contrast */
 }
 
 .hero-title {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added shadow for style and visibility */
+  background: linear-gradient(90deg, #ffffff, #ff4500); /* Gradient for style */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Allows gradient to show */
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added shadow for visibility */
+  background: linear-gradient(90deg, #ffffff, #ff4500); /* Gradient for style */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Allows gradient to show */
 }
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .hero {
     height: 200px;
-    margin-top: 2rem; /* Reduced from 2.5rem */
+    margin-top: 2rem;
   }
   .hero-overlay {
     padding: 0.5rem;
