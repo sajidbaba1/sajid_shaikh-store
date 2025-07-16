@@ -21,7 +21,9 @@ const Navbar = () => {
               transition={{ type: 'spring', stiffness: 300 }}
               className="navbar-link"
             >
-              <a href={`#${item.toLowerCase()}`}>{item}</a>
+              <a href={`#${item.toLowerCase()}`} className="inline-block">
+                {item}
+              </a>
             </motion.li>
           ))}
         </ul>
