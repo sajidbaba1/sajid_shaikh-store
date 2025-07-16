@@ -62,28 +62,38 @@
     gap: 0.75rem;
     z-index: 50;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+  .navbar-links.active.expanded {
+    transform: scaleY(1);
   }
   .navbar.scrolled .navbar-links.active {
     top: calc(100% - 0.25rem);
   }
-  /* Stylish hamburger button and left shift */
+  /* Enhanced stylish hamburger button */
   .navbar .flex.items-center {
-    margin-left: -1rem; /* Increased from -0.5rem for more left shift */
+    margin-left: -1.5rem; /* Increased from -1rem for more left shift */
   }
   .navbar button {
     background-color: #ffffff;
-    border: 2px solid #ff0000;
-    border-radius: 5px;
-    padding: 0.25rem;
+    border: 2px solid #ff4500; /* Changed to orange for better look */
+    border-radius: 8px; /* Increased for smoother edges */
+    padding: 0.3rem 0.5rem;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
   }
   .navbar button:hover {
-    background-color: #ff0000;
+    background-color: #ff4500;
     border-color: #ffffff;
     color: #ffffff;
+    transform: scale(1.1); /* Slight scale on hover */
   }
   .navbar button svg {
     stroke-width: 2.5;
+    width: 1.5rem; /* Increased size */
+    height: 1.5rem; /* Increased size */
   }
 }
 
