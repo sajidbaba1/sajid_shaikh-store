@@ -27,22 +27,23 @@
 
 .product-grid {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;
   gap: 1.5rem;
-  padding-bottom: 1rem; /* Prevent cutoff */
+  padding-bottom: 1rem;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-grid::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for cleaner look */
+  display: none;
 }
 
 @media (min-width: 640px) {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow-x: hidden; /* Disable scrolling on tablet */
+    overflow-x: hidden;
+    padding: 0 1rem; /* Added padding to center grid */
   }
 }
 
@@ -55,6 +56,7 @@
 @media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 2rem; /* Increased padding for larger screens */
   }
 }
 
