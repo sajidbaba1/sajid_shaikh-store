@@ -49,7 +49,7 @@ const ProductCard = ({ product }) => {
         </p>
         <motion.a
           href={product.affiliateLink}
-          whileHover={{ scale: 1.05, backgroundColor: '#FF0000' }} // Netflix red
+          whileHover={{ scale: 1.05, backgroundColor: '#ff0000' }}
           whileTap={{ scale: 0.95 }}
           className="product-button"
         >
