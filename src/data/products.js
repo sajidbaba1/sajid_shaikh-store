@@ -9,6 +9,15 @@ export const products = {
       stock: 10,
       affiliateLink: 'https://example.com/hair1',
     },
+    {
+      id: 2,
+      name: 'Hair Oil',
+      image: '/assets/hair2.jpg',
+      originalPrice: 599,
+      discountedPrice: 499,
+      stock: 10,
+      affiliateLink: 'https://example.com/hair2',
+    },
   ],
   skin: [
     {

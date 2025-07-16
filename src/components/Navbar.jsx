@@ -12,18 +12,23 @@ const Navbar = () => {
       className="navbar"
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <h1 className="navbar-logo">Sajid Shaikh Store</h1>
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="navbar-logo"
+        >
+          Sajid Shaikh Store
+        </motion.h1>
         <ul className="navbar-links">
           {navItems.map((item) => (
             <motion.li
               key={item}
-              whileHover={{ scale: 1.1, color: '#FF0000' }} // Netflix red hover
+              whileHover={{ scale: 1.1, color: '#FF0000' }}
               transition={{ type: 'spring', stiffness: 300 }}
               className="navbar-link"
             >
-              <a href={`#${item.toLowerCase()}`} className="inline-block">
-                {item}
-              </a>
+              <a href={`#${item.toLowerCase()}`}>{item}</a>
             </motion.li>
           ))}
         </ul>
