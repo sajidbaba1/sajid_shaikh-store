@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5); /* Darkened further for contrast */
+  filter: brightness(0.5);
 }
 
 .hero-overlay {
@@ -26,36 +26,32 @@
   text-align: center;
   color: #ffffff;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* Increased opacity for better contrast */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
   font-size: 2rem;
-  font-weight: 900; /* Increased boldness */
+  font-weight: 900;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 3px; /* Increased for style */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
-  background: linear-gradient(90deg, #ffffff, #ff4500, #ff8c00); /* Multi-color gradient */
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(90deg, #ffffff, #ff4500, #ff8c00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  padding: 0.25rem 0.5rem; /* Added padding for emphasis */
-  border: 2px solid #ff4500; /* Added border for contrast */
-  border-radius: 5px; /* Rounded edges */
+  padding: 0.25rem 0.5rem;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger shadow */
-  background: linear-gradient(90deg, #ffffff, #ff4500); /* Gradient */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(90deg, #ffffff, #ff4500);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  padding: 0.1rem 0.3rem; /* Added padding */
-  border: 1px solid #ff4500; /* Subtle border */
-  border-radius: 3px; /* Rounded edges */
+  padding: 0.1rem 0.3rem;
 }
 
 /* Mobile adjustments */
