@@ -5,17 +5,30 @@
 }
 
 .section-title {
-  font-size: 2.5rem; /* Increased from 1.875rem */
+  font-size: 2.5rem;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 2rem;
   text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Adjustable width of the line */
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem; /* Increased gap */
+  gap: 2rem;
 }
 
 @media (min-width: 640px) {
