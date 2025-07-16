@@ -23,7 +23,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`navbar ${isScrolled ? 'scrolled' : ''}`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center relative">
         <motion.h1
           initial={{ opacity: 0, scale: 0.8, filter: 'brightness(0.5)' }}
           animate={{ opacity: 1, scale: 1, filter: 'brightness(1.5)' }}
@@ -48,6 +48,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white md:hidden focus:outline-none z-50"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg
               className="w-6 h-6"
