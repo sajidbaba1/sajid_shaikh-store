@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 500px; /* Increased height */
+  height: 600px; /* Increased height */
   width: 100%;
   overflow: hidden;
 }
@@ -28,12 +28,31 @@
 }
 
 .hero-title {
-  font-size: 3rem; /* Increased from 2rem */
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
+  color: #111111;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(237, 237, 237, 0.2);
+  backdrop-filter: blur(5px);
+  display: inline-block;
 }
 
+
 .hero-subtitle {
-  font-size: 1.75rem; /* Increased from 1.25rem */
+  -webkit-text-stroke: 1px #222222;
+  text-stroke: 1px #222222;
+  color: #f0f0f0;
+  font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow:
+    2px 2px 8px rgba(0,0,0,0.5),
+    0 0 2px #222222;
+  background: rgba(0,0,0,0.15);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.3rem;
+  display: inline-block;
 }
