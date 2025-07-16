@@ -3,7 +3,7 @@
   height: 300px;
   width: 100%;
   overflow: hidden;
-  margin-top: 3rem; /* Offset for navbar height */
+  margin-top: 2.5rem; /* Reduced from 3rem to match new navbar height */
 }
 
 .hero-image {
@@ -43,7 +43,7 @@
 @media (max-width: 640px) {
   .hero {
     height: 200px;
-    margin-top: 2.5rem; /* Adjusted for mobile navbar height */
+    margin-top: 2rem; /* Reduced from 2.5rem */
   }
   .hero-overlay {
     padding: 0.5rem;
