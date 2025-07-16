@@ -1,0 +1,11 @@
+.product-section {
+  @apply py-12 bg-black;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-white mb-6;
+}
+
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
